@@ -1,0 +1,15 @@
+<div class="row main-container">
+    <div class="center-form panel">
+        <div class="panel-body">
+            <h2 class="text-center">Add Task </h2>
+            <p >{{helloWorld2 | async}}</p> <p>{{helloWorldError2}}</p>
+            <form (submit)="addTodolist()" [formGroup]="form" >
+                <div class="form-group has-feedback">
+                    <input  type="text" formControlName="tasks" class="form-control input-lg" placeholder="Write a new task">
+                    <i class="fa form-control-feedback fa-at"></i>
+                </div>         
+                <button type="submit"  [disabled]="!form.valid" class="btn btn-lg btn-block btn-success"> Add </button>
+            </form>
+        </div>
+    </div>
+</div>
